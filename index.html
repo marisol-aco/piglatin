@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <title>Pig Latin Project</title>
+    <style>
+      
+      body {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fce4ec; 
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff4081;
+      }
+
+
+      #wordInput {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #translate-pl {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #ff4081; 
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #translate-pl:hover {
+        background-color: #f50057;
+      }
+
+      #showTranslation {
+        font-size: 28px;
+        font-family: 'Balsamiq Sans', cursive;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+
+      function translateToPigLatin() {
+        // Obtiene el valor del input
+        var inputText = document.getElementById("wordInput").value.trim();
+
+
+        if (inputText !== "") {
+
+          var words = inputText.split(" ");
+
+
+          var translatedText = words.map(function(word) {
+
+            return word.slice(1) + word[0] + "ay";
+          });
+
+
+          document.getElementById("showTranslation").innerText = translatedText.join(" ");
+        } else {
+
+          document.getElementById("showTranslation").innerText = "Please enter a word or phrase.";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>"Pig Latin Translator"</h1>
+      
+    </header> 
+    <hr/>
+    <div>
+      <label for="wordInput">Traduce la palabra deseada</label><br>
+      <input id="wordInput" name="wordInput" value=""><br> 
+      <button onclick="translateToPigLatin()" type="button" id="translate-pl">PIG OUT</button>
+      <div id="showTranslation"></div>
+       <CENTER><img src="https://i.pinimg.com/originals/b9/d5/38/b9d5383ebe0c91e2ddcb33f49cc93608.gif" alt="Funny image">  </CENTER>
+<h2>What is the Latin pig?</h2>
+            <p>In Pig Latin, you take the first consonant of the English word and put it at the end and then add -ay. For example, "What a beautiful day!" translates to "Atwhay ayay eautifulbay ayda!". For words that begin with a vowel or a silent letter, simply add -way to the end of the word</p>
+
+            <table>
+              <tr>
+                <th style="background-color: mediumvioletred">ingles </th>
+                <th style="background-color: mediumvioletred">español</th>
+              </tr> 
+              <tr>
+                <th style="background-color: pink">hello</th>
+                <th style="background-color: pink">hola</th>
+              <tr/>
+              <tr>
+                <th style="background-color: pink">house</th>
+                <th style="background-color: pink">casa</th>
+              </tr>
+              <tr>
+                <th style="background-color: pink">pink</th>
+                <th style="background-color: pink">rosa</th>
+              </tr>
+              <tr>
+                 <th style="background-color: pink">blue</th>
+                <th style="background-color: pink">azul</th>
+              </tr>
+              <tr>
+                 <th style="background-color: pink;">mouse</th>
+                <th style="background-color: pink;">raton</th>
+              </tr>
+              <tr>
+                 <th style="background-color: pink;">word</th>
+                <th style="background-color: pink;">palabra</th>
+              </tr>
+              <tr>
+                 <th style="background-color: pink;">kiss</th>
+                 <th style="background-color: pink;">beso</th>
+              </tr>
+              <tr>
+                <th style="background-color: pink;">friends</th>
+                 <th style="background-color: pink;">amigos</td>
+              </tr>
+            </table>
+        </body>
+      </html>
+</html>
